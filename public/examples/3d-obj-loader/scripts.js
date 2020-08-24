@@ -48,14 +48,14 @@ scene.background = new THREE.Color( 'white' )
 var mtlLoader = new THREE.MTLLoader();
 mtlLoader.setTexturePath('/examples/3d-obj-loader/model/');
 mtlLoader.setPath('/examples/3d-obj-loader/model/');
-mtlLoader.load('geomodel.mtl', function (materials) {
+mtlLoader.load('geomodel3.mtl', function (materials) {
 
     materials.preload();
 
     var objLoader = new THREE.OBJLoader();
      objLoader.setMaterials(materials);
     objLoader.setPath('/examples/3d-obj-loader/model/');
-    objLoader.load('geomodel.obj', function (object) {
+    objLoader.load('geomodel3.obj', function (object) {
     
         scene.add(object);
         // object.color = 0xff0000;
