@@ -43,6 +43,7 @@ scene.background = new THREE.Color( 'white' )
 
   // remember to add the light to the scene
   scene.add( light );
+// var texture = new THREE.TextureLoader().load( './model2/Untitled.001.png' );
 
 var mtlLoader = new THREE.MTLLoader();
 mtlLoader.setTexturePath('/examples/3d-obj-loader/model/');
@@ -52,7 +53,7 @@ mtlLoader.load('geomodel.mtl', function (materials) {
     materials.preload();
 
     var objLoader = new THREE.OBJLoader();
-    // objLoader.setMaterials(materials);
+     objLoader.setMaterials(materials);
     objLoader.setPath('/examples/3d-obj-loader/model/');
     objLoader.load('geomodel.obj', function (object) {
     
